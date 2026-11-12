@@ -159,12 +159,13 @@ export const DataProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   // Firestore Sync if configured
   useEffect(() => {
     if (!isFirebaseConfigured() || !db) return;
+    const firestoreDb = db;
 
     const syncWithFirestore = async () => {
       try {
         setIsSyncing(true);
         // Load collections from Firestore if available
-        const studentsSnap = await getDocs(collection(db, 'students'));
+        const studentsSnap = await getDocs(collection(firestoreDb, 'students'));
         if (!studentsSnap.empty) {
           const loadedStudents = studentsSnap.docs.map(d => d.data() as Student);
           setStudents(loadedStudents);

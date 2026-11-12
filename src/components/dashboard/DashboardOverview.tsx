@@ -51,7 +51,7 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({
   const totalTeachersCount = teachers.filter(t => t.status === 'active').length;
 
   // 3. Today's classes
-  const todayDayName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][new Date().getDay()];
+  const todayDayName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][new Date().getDay()] as import('../../types').DayOfWeek;
   const todayClasses = classes.filter(c => c.dayOfWeek === todayDayName && c.status === 'active');
   const todayClassesCount = todayClasses.length;
 

@@ -49,7 +49,7 @@ export interface Teacher {
   };
   joinedDate: string;
   notes?: string;
-  createdAt: string;
+  createdAt?: string;
 }
 
 export interface Subject {
