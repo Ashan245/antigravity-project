@@ -101,7 +101,7 @@ export const DashboardOverview: React.FC<DashboardOverviewProps> = ({
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs font-semibold text-indigo-100">
               <Calendar className="w-3.5 h-3.5" />
-              <span>{formatSinhalaDate(todayStr)} • {SINHALA_DAYS[todayDayName as any]}</span>
+              <span>{formatSinhalaDate(todayStr)} • {SINHALA_DAYS[todayDayName]}</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-white">
               ප්‍රධාන පරිපාලක පාලක පුවරුව
